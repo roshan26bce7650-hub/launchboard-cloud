@@ -1,48 +1,39 @@
-# launchboard-cloud
-https://launchboard-cloud.onrender.com/      - Link to the Website
+# Launchboard Cloud 🚀
 
-A simple GitHub-inspired website built with HTML and CSS, featuring a clean interface, modern design, and responsive layout. This project showcases my frontend web development and UI/UX design skills.
-# GitHub Clone 🚀
+Launchboard Cloud is a lightweight project and task dashboard built with Flask, SQLite, HTML, CSS, and JavaScript.
 
+## Features
+- User registration and login
+- Personal project dashboard
+- Create and delete projects
+- Add tasks with status, priority, and due date
+- Update task status and delete tasks
+- Dashboard statistics and recent tasks
+- Responsive layout
+- Health-check endpoint at `/health`
 
-
-A GitHub-inspired website built to demonstrate my frontend web development and UI/UX design skills.
-
-## ✨ Features
-
-* Clean and modern interface
-* Simple and user-friendly design
-* Responsive layout
-* GitHub-inspired appearance
-
-## 🛠️ Technologies Used
-
-* HTML5
-* CSS3
-* JavaScript (if applicable)
-
-## 📸 Preview
-
-Open the website in your browser to explore the design and features.
-
-## 🚀 Getting Started
-
-1. Clone this repository:
-
+## Run locally
+1. Install Python 3.10 or newer.
+2. Create and activate a virtual environment.
+3. Install dependencies:
    ```bash
-   git clone YOUR_REPOSITORY_URL
+   pip install -r requirements.txt
    ```
-2. Open the project folder.
-3. Open `index.html` in your browser.
+4. Start the app:
+   ```bash
+   python app.py
+   ```
+5. Open `http://127.0.0.1:5000`.
 
-## 🎯 Purpose
+The SQLite database is created automatically when the app starts.
 
-This project was created to improve my frontend development skills and gain practical experience in website design.
+## Deploy to Render
+This repository includes `render.yaml`. Push the project to GitHub and create a new Web Service on Render from the repository. Render can use the included configuration. Set a strong `SECRET_KEY` in the service environment if you manage environment variables manually.
 
-Katru Roshan
-B.Tech CSE-Core
-First Semester(2026 fall semester)
+**Note:** SQLite data stored on a typical ephemeral Render filesystem may not persist across redeploys. For production use, connect a managed PostgreSQL database and add CSRF protection, rate limiting, and email verification.
 
----
-
-⭐ If you like this project, consider giving it a star!
+## Built with
+- Python / Flask
+- SQLite
+- HTML5 / CSS3
+- Vanilla JavaScript
