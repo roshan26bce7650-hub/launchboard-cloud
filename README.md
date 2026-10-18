@@ -39,9 +39,9 @@ Open the website in your browser to explore the design and features.
 
 This project was created to improve my frontend development skills and gain practical experience in website design.
 
-## 👨‍💻 Author
-
-**Roshan Patidar**
+Katru Roshan
+B.Tech CSE-Core
+First Semester(2026 fall semester)
 
 ---
 
