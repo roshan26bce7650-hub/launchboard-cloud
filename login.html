@@ -1,0 +1,5 @@
+{% extends "auth.html" %}
+{% set heading = "Welcome back" %}{% set subheading = "Sign in and pick up where you left off." %}
+{% set switch_text = "New to Launchboard?" %}{% set switch_link = "Create an account" %}{% set switch_url = url_for('register') %}
+{% block title %}Sign in — Launchboard Cloud{% endblock %}
+{% block form %}<form method="post" class="auth-form"><label>Email address<input type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label><label>Password<input type="password" name="password" placeholder="Your password" autocomplete="current-password" required></label><button class="button button-full" type="submit">Sign in <span>↗</span></button></form>{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Launchboard Cloud — Your work, in motion{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="eyebrow"><span class="pulse"></span> YOUR WORKSPACE, REIMAGINED</div>
+  <h1>Big ideas deserve<br><span class="gradient-text">a better launchpad.</span></h1>
+  <p class="hero-copy">Bring projects, tasks, and momentum into one calm, focused workspace. Plan your next move and make progress visible.</p>
+  <div class="hero-actions"><a class="button" href="{{ url_for('register') }}">Create your workspace <span>↗</span></a><a class="text-link" href="{{ url_for('login') }}">I already have an account →</a></div>
+  <div class="hero-proof"><div class="avatar-stack"><i>R</i><i>✦</i><i>✓</i></div><span>Made for builders, teams, and big ideas.</span></div>
+  <div class="preview-window">
+    <div class="preview-top"><div class="window-dots"><i></i><i></i><i></i></div><span>workspace / overview</span><span class="preview-status">● All systems ready</span></div>
+    <div class="preview-body">
+      <aside class="preview-sidebar"><div class="mini-logo">L <span>launchboard</span></div><div class="mini-nav active">▦ &nbsp; Overview</div><div class="mini-nav">◈ &nbsp; My projects</div><div class="mini-nav">✓ &nbsp; Tasks</div><div class="mini-label">WORKSPACE</div><div class="mini-project"><i></i> Website refresh</div><div class="mini-project"><i class="violet"></i> Brand launch</div><div class="mini-project"><i class="orange"></i> Mobile app</div></aside>
+      <div class="preview-main"><div class="preview-greeting">MONDAY, YOUR WAY <h3>Make today count<span>.</span></h3></div><div class="mini-stats"><div><small>ACTIVE PROJECTS</small><strong>08</strong><em>↗ Moving forward</em></div><div><small>TASKS COMPLETED</small><strong>24</strong><em>↗ Nice momentum</em></div><div><small>ON YOUR RADAR</small><strong>12</strong><em>Keep it rolling</em></div></div><div class="preview-lower"><div class="preview-card"><div class="card-title">Project momentum <span>↗</span></div><div class="bar-row"><span>Website refresh</span><b>78%</b><i><u style="width:78%"></u></i></div><div class="bar-row"><span>Brand launch</span><b>52%</b><i><u style="width:52%"></u></i></div><div class="bar-row"><span>Mobile app</span><b>35%</b><i><u style="width:35%"></u></i></div></div><div class="preview-card tasks-card"><div class="card-title">Up next <span>•••</span></div><p><i class="check">✓</i> Finalize homepage layout</p><p><i class="empty-check"></i> Review launch checklist</p><p><i class="empty-check"></i> Share first prototype</p></div></div></div>
+    </div>
+  </div>
+</section>
+<section class="feature-section"><div class="section-kicker">LESS CHAOS. MORE CLARITY.</div><h2>Everything in motion.<br><span class="muted-text">Nothing falling through.</span></h2><div class="feature-grid"><article class="feature-card"><div class="feature-icon violet-icon">◈</div><h3>Projects with purpose</h3><p>Give every idea a home, add context, and keep your priorities in sight.</p></article><article class="feature-card"><div class="feature-icon green-icon">✓</div><h3>Tasks that move</h3><p>Track what’s next, what’s underway, and what you’ve already finished.</p></article><article class="feature-card"><div class="feature-icon orange-icon">↗</div><h3>Progress you can see</h3><p>Simple stats and visual progress help you celebrate the small wins.</p></article></div></section>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Launchboard Cloud{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="{{ url_for('index') }}"><span class="brand-mark">L</span><span>launchboard<span class="brand-light"> cloud</span></span></a>
+    {% if session.get('user_id') %}
+      <nav class="topnav"><a href="{{ url_for('dashboard') }}">Dashboard</a><span class="user-chip">{{ session.get('user_name', 'User')[:1]|upper }}</span><a class="nav-logout" href="{{ url_for('logout') }}">Sign out ↗</a></nav>
+    {% else %}
+      <nav class="topnav"><a href="{{ url_for('login') }}">Sign in</a><a class="button button-small" href="{{ url_for('register') }}">Get started <span>↗</span></a></nav>
+    {% endif %}
+  </header>
+  <main class="page-wrap">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}<div class="flash-stack">{% for category, message in messages %}<div class="flash {{ category }}">{{ message }}</div>{% endfor %}</div>{% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="footer"><span>© 2026 Launchboard Cloud</span><span>Make good work happen. <b>✦</b></span></footer>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{% extends "auth.html" %}
+{% set heading = "Create your account" %}{% set subheading = "Start building your workspace today." %}
+{% set switch_text = "Already have an account?" %}{% set switch_link = "Sign in" %}{% set switch_url = url_for('login') %}
+{% block title %}Create account — Launchboard Cloud{% endblock %}
+{% block form %}<form method="post" class="auth-form"><label>Your name<input name="name" placeholder="e.g. Roshan Patidar" autocomplete="name" required></label><label>Email address<input type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label><label>Password<input type="password" name="password" placeholder="At least 8 characters" minlength="8" autocomplete="new-password" required></label><button class="button button-full" type="submit">Create account <span>↗</span></button><p class="form-note">Your projects are private to your account.</p></form>{% endblock %}
